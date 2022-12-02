@@ -5,11 +5,19 @@
 def to_camel_case(name: str) -> str:
     # replace this for solution
     list_name = name.split("_")
+    first_letter = ""
     string = ""
     for i in range(len(list_name)):
         for j in range(len(list_name[i])):
-            list_name[i][0] = list_name[i][0].upper()
-    return list_name
+            if j == 0:
+                first_letter = list_name[i][0]
+                first_letter = first_letter.upper()
+                string += first_letter
+            else:
+                string += list_name[i][j]
+
+
+    return string
 
 
 print("Example:")

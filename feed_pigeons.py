@@ -25,7 +25,6 @@ def checkio(food: int) -> int:
             food -=1
             list_pg[i] = list_pg[i] + 1
             i += 1
-            print(list_pg)
             if food == 0:
                 break
         pigeons = pigeons_comed
@@ -37,6 +36,5 @@ def checkio(food: int) -> int:
         else: break
     return counter
 
-
 print("Example:")
-print(checkio(25))
+print(checkio(5))
