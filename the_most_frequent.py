@@ -45,4 +45,4 @@ def most_frequent(data: list[str]) -> str:
 
 
 print("Example:")
-print(most_frequent(["a", "b", "c", "a", "bi", "a"]))
+print(most_frequent(["a", "b", "c", "a", "bi", "a", "bi", "bi",]))
