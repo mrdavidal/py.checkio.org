@@ -15,13 +15,25 @@ Input: A list of integers.
 
 Output: Integer.
 """
-def changing_direction(elements: list[int]) -> int:
-    # your code here
-
-
+def changing_direction(elements: list) -> int:
+    new_list = []
+    anterior = elements[0]
+    res = 0
+    if len(elements) == 1:
+        return elements[0]
+    for i in range(len(elements)):
+        if elements[i] - anterior != 0:
+            new_list.append(elements[i] - anterior)
+        anterior = elements[i]
+    ante = new_list[0]
+    for j in range(len(new_list)):
+        if (ante < 0 and new_list[j] > 0) or (ante > 0 and new_list[j] < 0):
+            res += 1
+        ante = new_list[j]
+    return res
 
 print("Example:")
-print(changing_direction([1, 2, 3, 4, 5]))
-print(changing_direction([1, 2, 3, 2, 1]))
-print(changing_direction([1, 2, 2, 1, 2, 2]))
+#print(changing_direction([1, 2, 3, 4, 5]))
+#print(changing_direction([1, 2, 3, 2, 1]))
+#print(changing_direction([1, 2, 2, 1, 2, 2]))
 print(changing_direction([1, 2, 2, 1, 2, 1, 2]))
