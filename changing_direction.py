@@ -33,7 +33,7 @@ def changing_direction(elements: list) -> int:
     return res
 
 print("Example:")
-#print(changing_direction([1, 2, 3, 4, 5]))
-#print(changing_direction([1, 2, 3, 2, 1]))
-#print(changing_direction([1, 2, 2, 1, 2, 2]))
+print(changing_direction([1, 2, 3, 4, 5]))
+print(changing_direction([1, 2, 3, 2, 1]))
+print(changing_direction([1, 2, 2, 1, 2, 2]))
 print(changing_direction([1, 2, 2, 1, 2, 1, 2]))
