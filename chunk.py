@@ -16,8 +16,13 @@ from typing import Iterable
 
 def chunking_by(items: list, size: int) -> Iterable:
     # your code here
+    list = []
     for i in range(0, len(items), size):
-        yield items[i : i + size]
+        #easy solution
+        #yield items[i : i + size]
+        #same result withouth the use of yield
+        list.append(items[i: i + size])
+    return list
 
 
 print("Example:")
